@@ -1,5 +1,5 @@
 // Selecionar o elemento do header
-let header = document.querySelector('header');
+let header = document.querySelector('#header');
 
 let logo = document.querySelector('.m-3');
 
