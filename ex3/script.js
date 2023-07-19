@@ -14,3 +14,9 @@ function adicionarMedicamentoAoCarrinho(event) {
   mostrarInformacoesMedicamento(nomeMedicamento, listaMedicamentos);
   alert(`${nomeMedicamento} foi adicionado ao carrinho.`);
 }
+
+const botoesAdicionarMedicamento = document.querySelectorAll('.btn-primary');
+
+botoesAdicionarMedicamento.forEach((botao) => {
+  botao.addEventListener('click', adicionarMedicamentoAoCarrinho);
+});
