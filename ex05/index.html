@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <form class="p-5">
+      <fieldset>
+        <legend>Formulário de Contato</legend>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Nome</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="digite seu nome">
+        </div>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Email</label>
+          <input type="email" id="disabledTextInput" class="form-control" placeholder="digite seu email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Digite uma mensagem</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="disabledSelect" class="form-label">Assunto</label>
+          <select id="disabledSelect" class="form-select">
+            <option>Revendas</option>
+            <option>Dúvidas</option>
+            <option>Críticas</option>
+            <option>Reclamações</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Enviar</button>
+      </fieldset>
+    </form>
+  </main>
+  
+  <script>    
+    function adicionarOpcao(selectElement, optionText) {
+      const option = document.createElement("option");
+      option.text = optionText;
+      selectElement.add(option);
+    }
+  
+    
+    const novosAssuntos = ["Sugestões", "Problemas Técnicos", "Outros"];
+  
+    const assuntosSelect = document.getElementById("assuntosSelect");
+  
+    novosAssuntos.forEach((assunto) => {
+      adicionarOpcao(assuntosSelect, assunto);
+    });
+  </script>
+  
+</body>
+</html>
